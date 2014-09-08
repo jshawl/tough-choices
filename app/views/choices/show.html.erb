@@ -1,5 +1,7 @@
 <h3><%= @choice.name %></h3>
 
+<%= link_to 'Edit Question', edit_choice_path( @choice ) %> 
+
 <%= render 'answer_form' %>
 
 <% @answers.each do |answer| %>
