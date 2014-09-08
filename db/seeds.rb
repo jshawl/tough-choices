@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Choice.delete_all
+Choice.create([
+  { name: "Should I quit my job?" },
+  { name: "Should I get married?" },
+  { name: "Should I buy a new car?" },
+])

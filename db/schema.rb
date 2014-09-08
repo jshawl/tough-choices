@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140908135527) do
   enable_extension "plpgsql"
 
   create_table "choices", force: true do |t|
-    t.string  "choice"
+    t.string  "name"
     t.integer "user_id"
   end
 
