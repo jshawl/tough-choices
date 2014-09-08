@@ -1,0 +1,7 @@
+<h3><%= @choice.name %></h3>
+
+<%= render 'answer_form' %>
+
+<% @answers.each do |answer| %>
+  <li><%= answer.answer %></li>
+<% end %>

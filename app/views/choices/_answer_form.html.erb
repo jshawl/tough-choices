@@ -1,0 +1,8 @@
+<%= form_for [@choice, @answer] do |f| %>
+  <%= f.hidden_field :choice_id, value: @choice.id %>
+  <%= f.label :no %>
+  <%= f.radio_button("answer", "no") %>
+  <%= f.label :yes %>
+  <%= f.radio_button("answer", "yes") %>
+  <%= f.submit %>
+<% end %>

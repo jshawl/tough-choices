@@ -8,6 +8,8 @@ class ChoicesController < ApplicationController
 
   def show
     @choice = Choice.find( params[:id] )
+    @answer = Answer.new
+    @answers = @choice.answers
   end
 
   def new
