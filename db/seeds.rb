@@ -8,7 +8,7 @@
 
 Choice.delete_all
 Choice.create([
-  { name: "Should I quit my job?" },
-  { name: "Should I get married?" },
-  { name: "Should I buy a new car?" },
+  { name: "Should I quit my job?", user_id: 1 },
+  { name: "Should I get married?", user_id: 1 },
+  { name: "Should I buy a new car?", user_id: 1 },
 ])
