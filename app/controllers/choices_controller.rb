@@ -27,7 +27,12 @@ class ChoicesController < ApplicationController
   end
 
   def create
-    @choice = Choice.new choice_params
+    @choice = Choice.new choice_params.merge(user_id: current_user.id )
+    if @choice.save
+      redirect_to @choice
+    else
+      render 'new'
+    end
   end
 
   private

@@ -1,0 +1,5 @@
+<%= form_for @choice do |f| %>
+  <%= f.label :name, 'Ask a tough question:' %>
+  <%= f.text_field :name , placeholder:"Should I buy a new car? "%>
+  <%= f.submit 'Save' %>
+<% end %>
