@@ -1,4 +1,11 @@
 <%= form_for @choice do |f| %>
+  <% if @choice.errors.any? %>
+    <ul>
+      <% @choice.errors.full_messages.each do |err| %>
+	<li><%= |err| %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <%= f.label :name, 'Ask a tough question:' %>
   <%= f.text_field :name , placeholder:"Should I buy a new car? "%>
   <%= f.submit 'Save' %>

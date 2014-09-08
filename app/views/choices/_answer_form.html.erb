@@ -1,4 +1,12 @@
 <%= form_for [@choice, @answer] do |f| %>
+  <% if @choice.errors.any? %>
+hey
+    <ul>
+      <% @answer.errors.full_messages.each do |err| %>
+	<li><%= err %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <%= f.hidden_field :choice_id, value: @choice.id %>
   <%= f.label :no %>
   <%= f.radio_button("answer", "no") %>
