@@ -4,6 +4,10 @@
 
 <%= render 'answer_form' %>
 
-<% @answers.each do |answer| %>
-  <li><%= answer.answer %></li>
+<% if @answers %>
+  <% @answers.each do |answer| %>
+    <li><%= answer.answer %></li>
+  <% end %>
+<% else %>
+  Results will not be available until <%= @ttl %>
 <% end %>

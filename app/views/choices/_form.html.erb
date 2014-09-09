@@ -6,7 +6,12 @@
       <% end %>
     </ul>
   <% end %>
+
   <%= f.label :name, 'Ask a tough question:' %>
   <%= f.text_field :name , placeholder:"Should I buy a new car? "%>
+
+  <%= f.label :ttl, 'When would you like to see the results?' %>
+  <%= f.date_field :ttl %>
+
   <%= f.submit 'Save' %>
 <% end %>
