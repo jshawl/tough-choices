@@ -1,6 +1,13 @@
 class ChoicesController < ApplicationController
 
   before_action :authenticate_user!
+  before_filter :require_permission, only: [:show, :edit, :delete]
+
+  def require_permission
+    if current_user != Choice.find(params[:id]).user
+      redirect_to root_path
+    end
+  end
 
   def index
     @choices = Choice.where(user_id: current_user.id)
