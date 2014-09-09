@@ -26,8 +26,10 @@ class ChoicesController < ApplicationController
   def show
     @choice = Choice.find( params[:id] )
     @answer = Answer.new
-    @ttl = 3
-    # @answers = @choice.answers
+    @ttl = (Date.parse(@choice.ttl) - Date.today).to_i
+    if @ttl < 1
+      @answers = @choice.answers
+    end
   end
 
   def new
@@ -45,7 +47,7 @@ class ChoicesController < ApplicationController
 
   private
   def choice_params
-    params.require(:choice).permit(:name)
+    params.require(:choice).permit(:name, :ttl)
   end
 
 end
