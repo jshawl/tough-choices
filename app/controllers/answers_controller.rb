@@ -4,7 +4,7 @@ class AnswersController < ApplicationController
     @answer = Answer.new(answer_params)
     @choice = Choice.find( params[:choice_id] )
     @answer.save
-    redirect_to @choice
+    redirect_to choice_path( @choice )
   end
 
   private

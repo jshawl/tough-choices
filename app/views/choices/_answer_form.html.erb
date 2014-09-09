@@ -1,8 +1,16 @@
 <%= form_for [@choice, @answer] do |f| %>
+  <% if @choice.errors.any? %>
+hey
+    <ul>
+      <% @answer.errors.full_messages.each do |err| %>
+	<li><%= err %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <%= f.hidden_field :choice_id, value: @choice.id %>
-  <%= f.label :no %>
-  <%= f.radio_button("answer", "no") %>
-  <%= f.label :yes %>
-  <%= f.radio_button("answer", "yes") %>
+  <input id="answer_answer_no" name="answer[answer]" type="radio" value="no">
+  <label for="answer_answer_no" class='answer-no'>No</label>
+  <input id="answer_answer_yes" name="answer[answer]" type="radio" value="yes">
+  <label for="answer_answer_yes" class='answer-yes'>Yes</label>
   <%= f.submit %>
 <% end %>

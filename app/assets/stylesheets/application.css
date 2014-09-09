@@ -13,3 +13,81 @@
  *= require_tree .
  *= require_self
  */
+
+form:after{
+  content:' ';
+  display:table;
+  clear:both;
+}
+
+input[type="radio"]{
+  position:absolute;
+  top:-999em;
+}
+
+body{
+  padding:2em;
+  margin:0;
+  background:#5FC5FB;
+  font-family: Helvetica;
+}
+
+h1 a{
+  color:#fff;
+  text-decoration:none;
+  font-size:2em;
+  letter-spacing:-.05em;
+}
+
+ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+li a,
+h3{
+  display:block;
+  padding:1.5em 3em 1.5em .25em;
+  box-shadow:0px 1px 0px rgba(100%, 100%, 100%, .25);
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+  translate3d(0,0,0);
+  transition:all .1s ease;
+  font-size:2em;
+}
+
+li a:hover{
+  padding-left:1em;
+}
+
+label[for="answer_answer_no"],
+label[for="answer_answer_yes"]{
+  display:block;
+  margin:auto;
+  float:left;
+  margin:2em 0 0 2em;
+  padding:1em 3em;
+  color:#fff;
+  border-radius:3px;
+  cursor:pointer;
+  box-shadow:5px 5px 0px #fff;
+  font-weight:bold;
+  letter-spacing:.085em; 
+} 
+
+
+:checked + label,
+label:active{
+  transform:translate(3px, 3px);  
+  box-shadow:1px 1px 0px #ddd;
+}
+
+.answer-yes{ 
+  background:#66CC66;
+}
+
+.answer-no{ 
+  background:tomato;
+}
