@@ -5,9 +5,7 @@
 <%= render 'answer_form' %>
 
 <% if @answers %>
-  <% @answers.each do |answer| %>
-    <li><%= answer.answer %></li>
-  <% end %>
+  <h2><%= @choice.verdict %></h2>
 <% else %>
   Results will not be available for another <%= @ttl %> days.
 <% end %>
