@@ -1,4 +1,6 @@
-<%= link_to 'Add a tough choice', new_choice_path %>
+<ul>
+  <li><%= link_to 'Add a tough choice', new_choice_path %></li>
 <% @choices.each do |choice| %>
   <li><%= link_to choice.name, choice_path( choice ) %> </li>
 <% end %>
+</ul>

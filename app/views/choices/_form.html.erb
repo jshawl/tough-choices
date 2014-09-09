@@ -2,7 +2,7 @@
   <% if @choice.errors.any? %>
     <ul>
       <% @choice.errors.full_messages.each do |err| %>
-	<li><%= |err| %></li>
+	<li><%= err %></li>
       <% end %>
     </ul>
   <% end %>
