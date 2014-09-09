@@ -76,12 +76,14 @@ label[for="answer_answer_yes"]{
   padding:1em 3em;
   color:#fff;
   border-radius:3px;
-  cursor:pointer;
   box-shadow:5px 5px 0px #fff;
   font-weight:bold;
   letter-spacing:.085em; 
 } 
 
+label, input{
+  cursor:pointer;
+}
 
 :checked + label,
 label:active{
@@ -89,8 +91,13 @@ label:active{
   box-shadow:1px 1px 0px #ddd;
 }
 
-.answer-yes{ 
+label[for="answer_answer_no"]{
+  margin-left:0;
+}
+
+label[for="answer_answer_yes"]{
   background:#66CC66;
+  margin-bottom:3em;
 }
 
 .answer-no{ 
@@ -106,7 +113,20 @@ input[type="text"]{
   width:100%;
   padding:1em 2em;
   font:inherit;
-  background:inherit;
-  border:1px solid lighten($blue, 20%);
-  color:#fff;
+  background:#fff;
+  border:none;
+  border-radius:3px;
+  margin-bottom:2em;
+}
+
+input[type="submit"]{
+  background:#fff;
+  border:none;
+  clear:both;
+  display:block;
+  border:none;
+  border-radius:3px;
+  font:inherit;
+  padding:1em 3em;
+  margin-bottom:1em;
 }
